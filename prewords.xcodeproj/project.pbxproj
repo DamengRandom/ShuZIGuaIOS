@@ -13,7 +13,6 @@
 		CD7169E12A49AD1000FF5501 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CD7169E02A49AD1000FF5501 /* FirebaseAuth */; };
 		CD7169E32A49AD1000FF5501 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CD7169E22A49AD1000FF5501 /* FirebaseFirestore */; };
 		CD7169E52A49AD1000FF5501 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD7169E42A49AD1000FF5501 /* FirebaseFirestoreSwift */; };
-		CD7169E72A49AF8900FF5501 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD7169E62A49AF8800FF5501 /* GoogleService-Info.plist */; };
 		CD7169E92A49B75300FF5501 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169E82A49B75300FF5501 /* AboutView.swift */; };
 		CD7169EB2A49B76B00FF5501 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169EA2A49B76B00FF5501 /* AppView.swift */; };
 		CD7169ED2A49B79900FF5501 /* AboutViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169EC2A49B79900FF5501 /* AboutViewViewModel.swift */; };
@@ -26,7 +25,6 @@
 		CD7169A62A3C802400FF5501 /* prewordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prewordsApp.swift; sourceTree = "<group>"; };
 		CD7169AA2A3C802600FF5501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD7169AD2A3C802600FF5501 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CD7169E62A49AF8800FF5501 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD7169E82A49B75300FF5501 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		CD7169EA2A49B76B00FF5501 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		CD7169EC2A49B79900FF5501 /* AboutViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewViewModel.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				CD7169DA2A49A7FD00FF5501 /* ViewModels */,
 				CD7169D22A49A44F00FF5501 /* Views */,
 				CD7169A62A3C802400FF5501 /* prewordsApp.swift */,
-				CD7169E62A49AF8800FF5501 /* GoogleService-Info.plist */,
 				CD7169AA2A3C802600FF5501 /* Assets.xcassets */,
 				CD7169AC2A3C802600FF5501 /* Preview Content */,
 			);
@@ -172,7 +169,6 @@
 			files = (
 				CD7169AE2A3C802600FF5501 /* Preview Assets.xcassets in Resources */,
 				CD7169AB2A3C802600FF5501 /* Assets.xcassets in Resources */,
-				CD7169E72A49AF8900FF5501 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
