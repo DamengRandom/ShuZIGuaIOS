@@ -45,6 +45,71 @@ class DashboardViewViewModel: ObservableObject {
         return true
     }
     
+    private func getShang(shang: Int) -> String {
+        switch shang {
+            case 0:
+                return "地"
+            case 1:
+                return "天"
+            case 2:
+                return "泽"
+            case 3:
+                return "火"
+            case 4:
+                return "雷"
+            case 5:
+                return "风"
+            case 6:
+                return "水"
+            case 7:
+                return "山"
+            default:
+                return "无"
+        }
+    }
+    
+    private func getXia(xia: Int) -> String {
+        switch xia {
+            case 0:
+                return "地"
+            case 1:
+                return "天"
+            case 2:
+                return "泽"
+            case 3:
+                return "火"
+            case 4:
+                return "雷"
+            case 5:
+                return "风"
+            case 6:
+                return "水"
+            case 7:
+                return "山"
+            default:
+                return "无"
+        }
+    }
+    
+    private func getYao(yao: Int) -> Int {
+        switch yao {
+            case 0:
+                return 6
+            case 1:
+                return 1
+            case 2:
+                return 2
+            case 3:
+                return 3
+            case 4:
+                return 4
+            case 5:
+                return 5
+            default:
+                return 0
+        }
+    }
+    
     private func getGuaCiString(one: Int, two: Int, three: Int) -> String {
         // do gua ci calculations
         let shang: Int = Int(two) % Int(8)
@@ -56,64 +121,11 @@ class DashboardViewViewModel: ObservableObject {
         var yaoCi: Int = -1
         var shangXiaGua: String = "无无"
         
-        switch shang {
-            case 0:
-                xiaGua = "地"
-            case 1:
-                xiaGua = "天"
-            case 2:
-                xiaGua = "泽"
-            case 3:
-                xiaGua = "火"
-            case 4:
-                xiaGua = "雷"
-            case 5:
-                xiaGua = "风"
-            case 6:
-                xiaGua = "水"
-            case 7:
-                xiaGua = "山"
-            default:
-                xiaGua = "无"
-        }
+        xiaGua = getShang(shang: shang)
         
-        switch xia {
-            case 0:
-                shangGua = "地"
-            case 1:
-                shangGua = "天"
-            case 2:
-                shangGua = "泽"
-            case 3:
-                shangGua = "火"
-            case 4:
-                shangGua = "雷"
-            case 5:
-                shangGua = "风"
-            case 6:
-                shangGua = "水"
-            case 7:
-                shangGua = "山"
-            default:
-                shangGua = "无"
-        }
+        shangGua = getXia(xia: xia)
         
-        switch yao {
-            case 0:
-                yaoCi = 6
-            case 1:
-                yaoCi = 1
-            case 2:
-                yaoCi = 2
-            case 3:
-                yaoCi = 3
-            case 4:
-                yaoCi = 4
-            case 5:
-                yaoCi = 5
-            default:
-                yaoCi = 0
-        }
+        yaoCi = getYao(yao: yao)
         
         shangXiaGua = "\(shangGua)\(xiaGua)"
         
