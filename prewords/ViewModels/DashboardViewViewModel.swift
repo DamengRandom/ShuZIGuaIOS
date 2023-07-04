@@ -71,6 +71,8 @@ class DashboardViewViewModel: ObservableObject {
         theYao = allYaos[yaoCi == 0 ? 5 : yaoCi - 1]
         
         // test for return a calculated result
+        print(getAnwers(guaYaoName: "\(theGua)\(theYao)"))
+        
         return "\(theGua)\(theYao)"
     }
 }
