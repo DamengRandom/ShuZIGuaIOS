@@ -9,7 +9,9 @@ import SwiftUI
 
 struct AppView: View {
     var body: some View {
-        generalView
+        NavigationView {
+            generalView
+        }
     }
     
     @ViewBuilder

@@ -9,12 +9,15 @@ import SwiftUI
 
 struct DashboardView: View {
     @StateObject var viewModel = DashboardViewViewModel()
+    @State private var output: String = "抱歉, 暂无结果 .."
     
     var body: some View {
+        VStack {
             Form {
                 if (!viewModel.errorMessage.isEmpty) {
                     Text(viewModel.errorMessage).foregroundColor(Color.red)
                 }
+
                 VStack(alignment: .leading) {
                     Section(header: Text("请输入第一个三位数")){
                         TextField("", text: $viewModel.firstNumberString).autocorrectionDisabled().keyboardType(.decimalPad)
@@ -25,26 +28,28 @@ struct DashboardView: View {
                     }
                     
                     Section(header: Text("请输入第三个三位数")){
-                        
                         TextField("", text: $viewModel.thirdNumberString).autocorrectionDisabled().keyboardType(.decimalPad)
                     }
                     
                     VStack(alignment: .center) {
                         Button("计算") {
                             viewModel.calculate()
-                            
+                            if (!viewModel.guaCi.isEmpty) {
+                                output = "\(viewModel.guaCi)"
+                            }
                         }.padding().frame(maxWidth: .infinity)
                             .foregroundColor(Color.white)
                             .background(Color.indigo)
                     }
-                    
-                    VStack {
-                        if (!viewModel.guaCi.isEmpty) {
-                            Text("卦爻: \(viewModel.guaCi)")
-                        }
-                    }
-                }.navigationTitle("周易 - 数字卦")
+                }
             }.scrollContentBackground(.hidden)
+        
+            VStack(alignment: .center) {
+                NavigationLink("点击阅读详细内容", destination: AnswerView(output: $output))
+            }
+            
+            Spacer()
+        }
     }
 }
 
