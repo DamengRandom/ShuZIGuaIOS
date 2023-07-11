@@ -62,7 +62,7 @@ class DashboardViewViewModel: ObservableObject {
         
         yaoCi = getYao(yao: yao)
         
-        shangXiaGua = "\(shangGua)\(xiaGua)"
+        shangXiaGua = "\(xiaGua)\(shangGua)"
         
         theGua = getTheGua(shangXiaGua: shangXiaGua)
         
