@@ -38,8 +38,8 @@ struct DashboardView: View {
                                 output = "\(viewModel.guaCi)"
                             }
                         }.padding().frame(maxWidth: .infinity)
-                            .foregroundColor(Color.white)
-                            .background(Color.indigo)
+//                            .foregroundColor(Color.white)
+//                            .background(Color.indigo)
                     }
                 }
             }.scrollContentBackground(.hidden)

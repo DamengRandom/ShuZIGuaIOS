@@ -22,6 +22,7 @@
 		CD7169F72A52E17500FF5501 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169F62A52E17500FF5501 /* AnswerModel.swift */; };
 		CD7169FA2A52E39E00FF5501 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169F92A52E39E00FF5501 /* Answers.swift */; };
 		CD7169FC2A543C2F00FF5501 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169FB2A543C2F00FF5501 /* AnswerView.swift */; };
+		CD7169FE2A6285A400FF5501 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CD7169F62A52E17500FF5501 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		CD7169F92A52E39E00FF5501 /* Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		CD7169FB2A543C2F00FF5501 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				CD7169EA2A49B76B00FF5501 /* AppView.swift */,
 				CD7169F02A49B8EB00FF5501 /* DashboardView.swift */,
 				CD7169FB2A543C2F00FF5501 /* AnswerView.swift */,
+				CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				CD7169EB2A49B76B00FF5501 /* AppView.swift in Sources */,
 				CD7169FC2A543C2F00FF5501 /* AnswerView.swift in Sources */,
 				CD7169F12A49B8EB00FF5501 /* DashboardView.swift in Sources */,
+				CD7169FE2A6285A400FF5501 /* SplashScreenView.swift in Sources */,
 				CD7169EF2A49B7AC00FF5501 /* DashboardViewViewModel.swift in Sources */,
 				CD7169FA2A52E39E00FF5501 /* Answers.swift in Sources */,
 				CD7169E92A49B75300FF5501 /* AboutView.swift in Sources */,
