@@ -8,14 +8,39 @@
 import SwiftUI
 import WebKit
 
+func openWebSite(urlString: String) {
+    if let url = URL(string: urlString) {
+        UIApplication.shared.open(url)
+    }
+}
+
 struct AnswerView: View {
     @Binding var output: String
 
     var body: some View {
         let theAnswer = getAnwers(guaYaoName: output)
-        Text("卦爻: \(theAnswer.guaName)\(theAnswer.yaoName)")
-        
-        Video(videoURL: theAnswer.videos[0]).frame(width: 350, height: 190).cornerRadius(12).padding(.horizontal, 24)
+
+        ScrollView {
+            VStack {
+                Text("卦爻: \(theAnswer.guaName)\(theAnswer.yaoName)")
+
+                Text("卦辞: \(theAnswer.guaCiWord)")
+
+                Text("爻辞: \(theAnswer.yaoCiWord)")
+
+                ForEach(theAnswer.videos, id: \.self) { video in
+                    Video(videoURL: video).frame(width: 350, height: 190).cornerRadius(16).padding(.horizontal, 24)
+                }
+                
+                ForEach(Array(theAnswer.references.enumerated()), id: \.element) { index, reference in
+                    Button(action: {
+                        openWebSite(urlString: reference)
+                    }) {
+                        Text("Reference: \(index + 1)")
+                    }
+                }
+            }.padding()
+        }
     }
 }
 
@@ -41,3 +66,4 @@ struct Video: UIViewRepresentable {
         uiView.load(URLRequest(url: YoutubeURL))
     }
 }
+

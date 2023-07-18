@@ -10,14 +10,11 @@ import SwiftUI
 struct DashboardView: View {
     @StateObject var viewModel = DashboardViewViewModel()
     @State private var output: String = "抱歉, 暂无结果 .."
+    @State private var isCalculated: Bool = false
     
     var body: some View {
         VStack {
             Form {
-                if (!viewModel.errorMessage.isEmpty) {
-                    Text(viewModel.errorMessage).foregroundColor(Color.red)
-                }
-
                 VStack(alignment: .leading) {
                     Section(header: Text("请输入第一个三位数")){
                         TextField("", text: $viewModel.firstNumberString).autocorrectionDisabled().keyboardType(.decimalPad)
@@ -32,18 +29,29 @@ struct DashboardView: View {
                     }
                     
                     VStack(alignment: .center) {
-                        Button("计算") {
-                            viewModel.calculate()
-                            if (!viewModel.guaCi.isEmpty) {
-                                output = "\(viewModel.guaCi)"
-                            }
-                        }.padding().frame(maxWidth: .infinity)
-//                            .foregroundColor(Color.white)
-//                            .background(Color.indigo)
+                        if (isCalculated == false) {
+                            Button("计算") {
+                                viewModel.calculate()
+                                
+                                isCalculated = true
+                                
+                                if (!viewModel.guaCi.isEmpty) {
+                                    output = "\(viewModel.guaCi)"
+                                }
+                            }.padding(.top, 8).padding(.bottom, 8).frame(maxWidth: .infinity).foregroundColor(Color.white).background(Color.indigo)
+                        } else {
+                            Button("重新计算") {
+                                isCalculated = false
+                            }.padding(.top, 8).padding(.bottom, 8).frame(maxWidth: .infinity).foregroundColor(Color.white).background(Color.indigo)
+                        }
                     }
                 }
+                
+                if (!viewModel.errorMessage.isEmpty) {
+                    Text(viewModel.errorMessage).foregroundColor(Color.red)
+                }
             }.scrollContentBackground(.hidden)
-        
+            
             VStack(alignment: .center) {
                 NavigationLink("点击阅读详细内容", destination: AnswerView(output: $output))
             }
