@@ -6,10 +6,22 @@
 //
 
 import SwiftUI
+import SlidingTabView
 
 struct AboutView: View {
+    @State private var tabIndex = 0
+
     var body: some View {
-        Text("About View")
+        VStack {
+            SlidingTabView(selection: $tabIndex, tabs: ["数字卦的意义", "我"], animation: .easeInOut)
+            Spacer()
+            if tabIndex == 0 {
+                Text("Tab 1 UI")
+            } else if tabIndex == 1 {
+                Text("Tab 2 UI")
+            }
+            Spacer()
+        }
     }
 }
 

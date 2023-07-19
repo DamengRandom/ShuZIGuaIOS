@@ -23,6 +23,7 @@
 		CD7169FA2A52E39E00FF5501 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169F92A52E39E00FF5501 /* Answers.swift */; };
 		CD7169FC2A543C2F00FF5501 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169FB2A543C2F00FF5501 /* AnswerView.swift */; };
 		CD7169FE2A6285A400FF5501 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */; };
+		CD716A012A6804BA00FF5501 /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = CD716A002A6804BA00FF5501 /* SlidingTabView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 			files = (
 				CD7169E12A49AD1000FF5501 /* FirebaseAuth in Frameworks */,
 				CD7169E32A49AD1000FF5501 /* FirebaseFirestore in Frameworks */,
+				CD716A012A6804BA00FF5501 /* SlidingTabView in Frameworks */,
 				CD7169E52A49AD1000FF5501 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +162,7 @@
 				CD7169E02A49AD1000FF5501 /* FirebaseAuth */,
 				CD7169E22A49AD1000FF5501 /* FirebaseFirestore */,
 				CD7169E42A49AD1000FF5501 /* FirebaseFirestoreSwift */,
+				CD716A002A6804BA00FF5501 /* SlidingTabView */,
 			);
 			productName = prewords;
 			productReference = CD7169A32A3C802400FF5501 /* prewords.app */;
@@ -191,6 +194,7 @@
 			mainGroup = CD71699A2A3C802400FF5501;
 			packageReferences = (
 				CD7169DF2A49AD1000FF5501 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CD7169FF2A6804BA00FF5501 /* XCRemoteSwiftPackageReference "SlidingTabView" */,
 			);
 			productRefGroup = CD7169A42A3C802400FF5501 /* Products */;
 			projectDirPath = "";
@@ -441,6 +445,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		CD7169FF2A6804BA00FF5501 /* XCRemoteSwiftPackageReference "SlidingTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QuynhNguyen/SlidingTabView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -458,6 +470,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD7169DF2A49AD1000FF5501 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		CD716A002A6804BA00FF5501 /* SlidingTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7169FF2A6804BA00FF5501 /* XCRemoteSwiftPackageReference "SlidingTabView" */;
+			productName = SlidingTabView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
