@@ -8,17 +8,6 @@
 import SwiftUI
 import Combine
 
-extension Binding where Value == String {
-    func max(_ limit: Int) -> Self {
-        if (self.wrappedValue.count > limit) {
-            DispatchQueue.main.async {
-                self.wrappedValue = String(self.wrappedValue.dropLast())
-            }
-        }
-        return self
-    }
-}
-
 struct DashboardView: View {
     @StateObject var viewModel = DashboardViewViewModel()
     @State private var output: String = "抱歉, 暂无结果 .."
@@ -33,7 +22,7 @@ struct DashboardView: View {
                     VStack {
                         Text("欢迎使用数字卦").font(.title).bold().padding()
                         
-                        TextField("请输入第一个三位数", text: $viewModel.firstNumber.max(3))
+                        TextField("请输入第一个三位数", text: $viewModel.firstNumber)
                             .keyboardType(.numberPad)
                             .padding()
                             .frame(width: 280, height: 40)
@@ -48,7 +37,7 @@ struct DashboardView: View {
                                 }
                             }
                         
-                        TextField("请输入第二个三位数", text: $viewModel.secondNumber.max(3))
+                        TextField("请输入第二个三位数", text: $viewModel.secondNumber)
                             .keyboardType(.numberPad)
                             .padding()
                             .frame(width: 280, height: 40)
@@ -63,7 +52,7 @@ struct DashboardView: View {
                                 }
                             }
                         
-                        TextField("请输入第三个三位数", text: $viewModel.thirdNumber.max(3))
+                        TextField("请输入第三个三位数", text: $viewModel.thirdNumber)
                             .keyboardType(.numberPad)
                             .padding()
                             .frame(width: 280, height: 40)
@@ -86,7 +75,7 @@ struct DashboardView: View {
                             guard (viewModel.validate()) else {
                                 return
                             }
-
+                            
                             viewModel.calculate()
                             
                             if (!viewModel.guaCi.isEmpty) {
@@ -106,13 +95,12 @@ struct DashboardView: View {
                         .frame(width: 280, height: 40)
                         .foregroundColor(Color.white)
                         .background(Color.indigo).cornerRadius(8)
-
+                        
                         Spacer()
                     }.navigationDestination(
                         isPresented: $isCalculated) {
                             AnswerView(output: $output)
-                            Text("")
-                                .hidden()
+                            Text("").hidden()
                         }
                 }
             }

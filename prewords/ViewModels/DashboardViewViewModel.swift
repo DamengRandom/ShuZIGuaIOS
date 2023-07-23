@@ -32,14 +32,38 @@ class DashboardViewViewModel: ObservableObject {
     func validate() -> Bool {
         errorMessage = ""
         
-        guard firstNumber.count == 3 && secondNumber.count == 3 && thirdNumber.count == 3 else {
-            errorMessage = "Please ensure the value must be 3 digits"
+        guard firstNumber.count == 3 else {
+            errorMessage = "请确保您输入的第一个数字是三位数."
             
             return false
         }
         
-        guard Int(firstNumber) ?? 0 > 100 && Int(firstNumber) ?? 0 < 999, Int(secondNumber) ?? 0 > 100 && Int(secondNumber) ?? 0 < 999, Int(thirdNumber) ?? 0 > 100 && Int(thirdNumber) ?? 0 < 999 else {
-            errorMessage = "Please ensure the value must between 100 and 999 ~~"
+        guard secondNumber.count == 3 else {
+            errorMessage = "请确保您输入的第二个数字是三位数."
+            
+            return false
+        }
+        
+        guard thirdNumber.count == 3 else {
+            errorMessage = "请确保您输入的第三个数字是三位数."
+            
+            return false
+        }
+        
+        guard Int(firstNumber) ?? 0 > 100 && Int(firstNumber) ?? 0 < 999 else {
+            errorMessage = "请确保您输入的第一个数字是在100到999范围内."
+            
+            return false
+        }
+        
+        guard Int(secondNumber) ?? 0 > 100 && Int(secondNumber) ?? 0 < 999 else {
+            errorMessage = "请确保您输入的第二个数字是在100到999范围内."
+            
+            return false
+        }
+        
+        guard Int(thirdNumber) ?? 0 > 100 && Int(thirdNumber) ?? 0 < 999 else {
+            errorMessage = "请确保您输入第三个数字是在100到999范围内."
             
             return false
         }
