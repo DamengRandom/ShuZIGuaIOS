@@ -8,10 +8,12 @@
 import Foundation
 
 class DashboardViewViewModel: ObservableObject {
-    @Published var firstNumberString: String = ""
-    @Published var secondNumberString: String = ""
-    @Published var thirdNumberString: String = ""
+    @Published var firstNumber: String = ""
+    @Published var secondNumber: String = ""
+    @Published var thirdNumber: String = ""
+    
     @Published var errorMessage: String = ""
+    
     @Published var guaCi: String = ""
     @Published var theGua: String = ""
     @Published var allYaos: [String] = []
@@ -20,22 +22,24 @@ class DashboardViewViewModel: ObservableObject {
     init() {}
     
     func calculate() {
-        if (validate()) {
-            guaCi = getGuaCiString(one: Int(firstNumberString) ?? 0, two: Int(secondNumberString) ?? 0, three: Int(thirdNumberString) ?? 0)
+        guard validate() else {
+            return
         }
+        
+        guaCi = getGuaCiString(one: Int(firstNumber) ?? 0, two: Int(secondNumber) ?? 0, three: Int(thirdNumber) ?? 0)
     }
     
     func validate() -> Bool {
         errorMessage = ""
         
-//        guard !firstNumberString.trimmingCharacters(in: .whitespaces).isEmpty, !secondNumberString.trimmingCharacters(in: .whitespaces).isEmpty, !thirdNumberString.trimmingCharacters(in: .whitespaces).isEmpty else {
-//            errorMessage = "Please enter a 3 digits integer value"
-//
-//            return false
-//        }
+        guard firstNumber.count == 3 && secondNumber.count == 3 && thirdNumber.count == 3 else {
+            errorMessage = "Please ensure the value must be 3 digits"
+            
+            return false
+        }
         
-        guard Int(firstNumberString) ?? 0 > 100 && Int(firstNumberString) ?? 0 < 999, Int(secondNumberString) ?? 0 > 100 && Int(secondNumberString) ?? 0 < 999, Int(thirdNumberString) ?? 0 > 100 && Int(thirdNumberString) ?? 0 < 999 else {
-            errorMessage = "Please ensure the number value must between 100 and 999 ~~"
+        guard Int(firstNumber) ?? 0 > 100 && Int(firstNumber) ?? 0 < 999, Int(secondNumber) ?? 0 > 100 && Int(secondNumber) ?? 0 < 999, Int(thirdNumber) ?? 0 > 100 && Int(thirdNumber) ?? 0 < 999 else {
+            errorMessage = "Please ensure the value must between 100 and 999 ~~"
             
             return false
         }
@@ -72,11 +76,5 @@ class DashboardViewViewModel: ObservableObject {
         print(getAnwers(guaYaoName: "\(theGua)\(theYao)"))
         
         return "\(theGua)\(theYao)"
-    }
-    
-    func resetFormFields() { // reset form field values
-        firstNumberString = ""
-        secondNumberString = ""
-        thirdNumberString = ""
     }
 }
