@@ -24,7 +24,7 @@ struct prewordsApp: App {
 /*
  @TODOs
  
- 1. reset when back to dashboard screen
+ 1. swift ui snack bar message to display error message of the form
  2. 
  
  */

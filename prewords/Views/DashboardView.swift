@@ -16,98 +16,63 @@ struct DashboardView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                // Color(.systemFill).ignoresSafeArea()
-                NavigationStack {
-                    VStack {
-                        Text("欢迎使用数字卦").font(.title).bold().padding()
-                        
-                        TextField("请输入第一个三位数", text: $viewModel.firstNumber)
-                            .keyboardType(.numberPad)
-                            .padding()
-                            .frame(width: 280, height: 40)
-                            .background(Color.black.opacity(0.05))
-                            .border(.red, width: .infinity)
-                            .cornerRadius(8)
-                            .onReceive(Just(viewModel.firstNumber)) { newValue in
-                                let filtered = newValue.filter { "0123456789".contains($0) }
+            VStack {
+                ZStack {
+                    // Color(.systemFill).ignoresSafeArea()
+                    NavigationStack {
+                        Spacer().frame(height: 32)
+                        VStack {
+                            Text("* 易经 - 数字卦 *").font(.title).bold().padding(.horizontal)
+                            
+                            Spacer().frame(height: 24)
+
+                            NumberFieldView(title: "请输入第一个三位数", value: $viewModel.firstNumber, space: 16)
+                            NumberFieldView(title: "请输入第二个三位数", value: $viewModel.secondNumber, space: 16)
+                            NumberFieldView(title: "请输入第三个三位数", value: $viewModel.thirdNumber, space: 24)
+                            
+                            Button("点击阅读详细内容") {
+                                guard (viewModel.validate()) else {
+                                    return
+                                }
                                 
-                                if (filtered != newValue) {
-                                    self.viewModel.firstNumber = filtered
+                                viewModel.calculate()
+                                
+                                if (!viewModel.guaCi.isEmpty) {
+                                    output = "\(viewModel.guaCi)"
+                                    
+                                    isCalculated = true
+                                    
+                                    viewModel.firstNumber = ""
+                                    viewModel.secondNumber = ""
+                                    viewModel.thirdNumber = ""
+                                } else {
+                                    isCalculated = false
                                 }
                             }
-                        
-                        TextField("请输入第二个三位数", text: $viewModel.secondNumber)
-                            .keyboardType(.numberPad)
-                            .padding()
+                            .padding(.top, 8)
+                            .padding(.bottom, 8)
                             .frame(width: 280, height: 40)
-                            .background(Color.black.opacity(0.05))
-                            .border(.red, width: .infinity)
-                            .cornerRadius(8)
-                            .onReceive(Just(viewModel.secondNumber)) { newValue in
-                                let filtered = newValue.filter { "0123456789".contains($0) }
-                                
-                                if (filtered != newValue) {
-                                    self.viewModel.secondNumber = filtered
-                                }
-                            }
-                        
-                        TextField("请输入第三个三位数", text: $viewModel.thirdNumber)
-                            .keyboardType(.numberPad)
-                            .padding()
-                            .frame(width: 280, height: 40)
-                            .background(Color.black.opacity(0.05))
-                            .border(.red, width: .infinity)
-                            .cornerRadius(8)
-                            .onReceive(Just(viewModel.thirdNumber)) { newValue in
-                                let filtered = newValue.filter { "0123456789".contains($0) }
-                                
-                                if (filtered != newValue) {
-                                    self.viewModel.thirdNumber = filtered
-                                }
-                            }
-                        
-                        if (!viewModel.errorMessage.isEmpty) {
-                            Text(viewModel.errorMessage).foregroundColor(Color.red)
-                        }
-                        
-                        Button("点击阅读详细内容") {
-                            guard (viewModel.validate()) else {
-                                return
+                            .foregroundColor(Color.white)
+                            .background(Color.indigo)
+                            .padding(.horizontal)
+                            
+                            if (!viewModel.errorMessage.isEmpty) {
+                                Text(viewModel.errorMessage).foregroundColor(Color.red)
                             }
                             
-                            viewModel.calculate()
                             
-                            if (!viewModel.guaCi.isEmpty) {
-                                output = "\(viewModel.guaCi)"
-                                
-                                isCalculated = true
-                                
-                                viewModel.firstNumber = ""
-                                viewModel.secondNumber = ""
-                                viewModel.thirdNumber = ""
-                            } else {
-                                isCalculated = false
+                        }.navigationDestination(
+                            isPresented: $isCalculated) {
+                                AnswerView(output: $output)
+                                Text("").hidden()
                             }
-                        }
-                        .padding(.top, 8)
-                        .padding(.bottom, 8)
-                        .frame(width: 280, height: 40)
-                        .foregroundColor(Color.white)
-                        .background(Color.indigo).cornerRadius(8)
-                        
-                        Spacer()
-                    }.navigationDestination(
-                        isPresented: $isCalculated) {
-                            AnswerView(output: $output)
-                            Text("").hidden()
-                        }
+                        Spacer().frame(height: 32)
+                    }
                 }
             }
         }
     }
 }
-
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
