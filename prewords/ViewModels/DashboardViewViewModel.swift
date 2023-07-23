@@ -20,24 +20,22 @@ class DashboardViewViewModel: ObservableObject {
     init() {}
     
     func calculate() {
-        guard validate() else {
-            return
+        if (validate()) {
+            guaCi = getGuaCiString(one: Int(firstNumberString) ?? 0, two: Int(secondNumberString) ?? 0, three: Int(thirdNumberString) ?? 0)
         }
-        
-        guaCi = getGuaCiString(one: Int(firstNumberString) ?? 0, two: Int(secondNumberString) ?? 0, three: Int(thirdNumberString) ?? 0)
     }
     
-    private func validate() -> Bool {
+    func validate() -> Bool {
         errorMessage = ""
         
-        guard !firstNumberString.trimmingCharacters(in: .whitespaces).isEmpty, !secondNumberString.trimmingCharacters(in: .whitespaces).isEmpty, !thirdNumberString.trimmingCharacters(in: .whitespaces).isEmpty else {
-            errorMessage = "Please enter a 3 digits integer value"
-            
-            return false
-        }
+//        guard !firstNumberString.trimmingCharacters(in: .whitespaces).isEmpty, !secondNumberString.trimmingCharacters(in: .whitespaces).isEmpty, !thirdNumberString.trimmingCharacters(in: .whitespaces).isEmpty else {
+//            errorMessage = "Please enter a 3 digits integer value"
+//
+//            return false
+//        }
         
         guard Int(firstNumberString) ?? 0 > 100 && Int(firstNumberString) ?? 0 < 999, Int(secondNumberString) ?? 0 > 100 && Int(secondNumberString) ?? 0 < 999, Int(thirdNumberString) ?? 0 > 100 && Int(thirdNumberString) ?? 0 < 999 else {
-            errorMessage = "Please ensure the number value must be 3 digits integer ~~"
+            errorMessage = "Please ensure the number value must between 100 and 999 ~~"
             
             return false
         }
@@ -74,5 +72,11 @@ class DashboardViewViewModel: ObservableObject {
         print(getAnwers(guaYaoName: "\(theGua)\(theYao)"))
         
         return "\(theGua)\(theYao)"
+    }
+    
+    func resetFormFields() { // reset form field values
+        firstNumberString = ""
+        secondNumberString = ""
+        thirdNumberString = ""
     }
 }
