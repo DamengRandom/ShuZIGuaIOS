@@ -21,22 +21,26 @@ struct AnswerView: View {
         let theAnswer = getAnwers(guaYaoName: output)
 
         ScrollView {
-            VStack {
-                Text("卦爻: \(theAnswer.guaName)\(theAnswer.yaoName)")
+            VStack(alignment: .leading) {
+                Text("卦爻: \(theAnswer.guaName)\(theAnswer.yaoName)").font(.largeTitle).padding(.leading, 8).padding(.bottom, 16)
 
-                Text("卦辞: \(theAnswer.guaCiWord)")
+                Text("卦辞: \(theAnswer.guaCiWord)").font(.headline).padding(.bottom, 0).padding(.leading, 8)
 
-                Text("爻辞: \(theAnswer.yaoCiWord)")
+                Text("爻辞: \(theAnswer.yaoCiWord)").font(.headline).padding(.top, 1).padding(.leading, 8).padding(.bottom, 16)
 
-                ForEach(theAnswer.videos, id: \.self) { video in
-                    Video(videoURL: video).frame(width: 350, height: 190).cornerRadius(16).padding(.horizontal, 24)
-                }
+                TabView {
+                    ForEach(theAnswer.videos, id: \.self) { video in
+                        Video(videoURL: video).frame(width: 350, height: 190).cornerRadius(16).padding(.horizontal, 24)
+                    }
+                }.tabViewStyle(PageTabViewStyle()).frame(height: 200)
+                
+                Text("相关索引").font(.title).padding(.leading, 8).padding(.bottom, 16).padding(.top, 16)
                 
                 ForEach(Array(theAnswer.references.enumerated()), id: \.element) { index, reference in
                     Button(action: {
                         openWebSite(urlString: reference)
                     }) {
-                        Text("Reference: \(index + 1)")
+                        Text("文章 - (\(index + 1))").padding(.leading, 8).padding(.top, 2)
                     }
                 }
             }.padding()

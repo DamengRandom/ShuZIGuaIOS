@@ -25,6 +25,8 @@
 		CD7169FE2A6285A400FF5501 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */; };
 		CD716A012A6804BA00FF5501 /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = CD716A002A6804BA00FF5501 /* SlidingTabView */; };
 		CD716A032A6D08B500FF5501 /* NumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A022A6D08B500FF5501 /* NumberFieldView.swift */; };
+		CD716A052A6FF19500FF5501 /* AboutPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A042A6FF19500FF5501 /* AboutPointView.swift */; };
+		CD716A072A6FF47B00FF5501 /* AboutExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A062A6FF47B00FF5501 /* AboutExplanationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		CD7169FB2A543C2F00FF5501 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		CD716A022A6D08B500FF5501 /* NumberFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldView.swift; sourceTree = "<group>"; };
+		CD716A042A6FF19500FF5501 /* AboutPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPointView.swift; sourceTree = "<group>"; };
+		CD716A062A6FF47B00FF5501 /* AboutExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutExplanationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				CD7169E82A49B75300FF5501 /* AboutView.swift */,
+				CD716A062A6FF47B00FF5501 /* AboutExplanationView.swift */,
 				CD7169EA2A49B76B00FF5501 /* AppView.swift */,
 				CD7169F02A49B8EB00FF5501 /* DashboardView.swift */,
 				CD7169FB2A543C2F00FF5501 /* AnswerView.swift */,
+				CD716A042A6FF19500FF5501 /* AboutPointView.swift */,
 				CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */,
 				CD716A022A6D08B500FF5501 /* NumberFieldView.swift */,
 			);
@@ -235,6 +241,8 @@
 				CD7169E92A49B75300FF5501 /* AboutView.swift in Sources */,
 				CD716A032A6D08B500FF5501 /* NumberFieldView.swift in Sources */,
 				CD7169F42A52DD1800FF5501 /* GuaYaoHelpers.swift in Sources */,
+				CD716A072A6FF47B00FF5501 /* AboutExplanationView.swift in Sources */,
+				CD716A052A6FF19500FF5501 /* AboutPointView.swift in Sources */,
 				CD7169A72A3C802400FF5501 /* prewordsApp.swift in Sources */,
 				CD7169F72A52E17500FF5501 /* AnswerModel.swift in Sources */,
 			);

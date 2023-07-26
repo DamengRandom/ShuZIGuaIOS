@@ -59,8 +59,6 @@ struct DashboardView: View {
                             if (!viewModel.errorMessage.isEmpty) {
                                 Text(viewModel.errorMessage).foregroundColor(Color.red)
                             }
-                            
-                            
                         }.navigationDestination(
                             isPresented: $isCalculated) {
                                 AnswerView(output: $output)

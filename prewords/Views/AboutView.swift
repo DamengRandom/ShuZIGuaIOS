@@ -16,7 +16,7 @@ struct AboutView: View {
             SlidingTabView(selection: $tabIndex, tabs: ["数字卦的意义", "我"], animation: .easeInOut)
             Spacer()
             if tabIndex == 0 {
-                Text("Tab 1 UI")
+                AboutExplanationView()
             } else if tabIndex == 1 {
                 Text("Tab 2 UI")
             }

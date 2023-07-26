@@ -24,7 +24,10 @@ struct prewordsApp: App {
 /*
  @TODOs
  
- 1. swift ui snack bar message to display error message of the form
- 2. 
+ 1. swift ui snack bar message to display error message of the form [@TODO]
+ 2. slider view for youtube videos: https://www.youtube.com/watch?v=VYxxzrlS8q0 [made it]
+ 3. design ideas: https://dribbble.com/tags/ios + https://dribbble.com/search/ios
+ 4. card view: https://www.youtube.com/watch?v=BeRXvlr9Tgc
+ 5. 
  
  */
