@@ -25,7 +25,7 @@ struct SplashScreenView: View {
             VStack {
                 VStack {
                     ShuZiGuaView().font(.system(size: 80)).foregroundColor(.red)
-                    Text("易经 - 数字卦").font(Font.custom("Baskerville-Bold", size: 26)).foregroundColor(.black.opacity(0.8))
+//                    Text("易经 - 数字卦").font(Font.custom("Baskerville-Bold", size: 26)).foregroundColor(.black.opacity(0.8))
                 }.scaleEffect(size).opacity(opacity).onAppear{
                     withAnimation(.easeIn(duration: 1.2)) {
                         self.size = 0.9

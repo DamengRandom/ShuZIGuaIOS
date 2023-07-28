@@ -16,9 +16,9 @@ struct prewordsApp: App {
     }
 }
 
-/* More functionalities
- 1. sticky header: https://www.youtube.com/watch?v=hmifqxD7seI
- 2. more ideas: https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F3550759%2Fscreenshots%2F16989324%2Fmedia%2F2a319e27906960f9c338b678db2fe0c7.png%3Fresize%3D400x0&tbnid=ZNNT7sey5tUXWM&vet=12ahUKEwiCgf7UmpiAAxX4UWwGHeF2BlsQMygFegUIARDPAQ..i&imgrefurl=https%3A%2F%2Fdribbble.com%2Ftags%2Fword%2520app&docid=U_n6loiKBmsmjM&w=400&h=300&q=word%20based%20ios%20app%20design&ved=2ahUKEwiCgf7UmpiAAxX4UWwGHeF2BlsQMygFegUIARDPAQ
+/* More Questions
+ 1. Search for when to use `Codeable` and `Identifiable` during struct definitions
+ 2. Search
 */
 
 /*
@@ -27,7 +27,6 @@ struct prewordsApp: App {
  1. swift ui snack bar message to display error message of the form [@TODO]
  2. slider view for youtube videos: https://www.youtube.com/watch?v=VYxxzrlS8q0 [made it]
  3. design ideas: https://dribbble.com/tags/ios + https://dribbble.com/search/ios
- 4. card view: https://www.youtube.com/watch?v=BeRXvlr9Tgc
- 5. 
- 
+ 4. card view: https://www.youtube.com/watch?v=BeRXvlr9Tgc + https://developer.apple.com/tutorials/app-dev-training/creating-a-card-view
+ 5.
  */

@@ -21,7 +21,7 @@ struct AppView: View {
                 Label("", systemImage: "house")
             }
             AboutView().tabItem {
-                Label("", systemImage: "person.circle")
+                Label("", systemImage: "gearshape.fill")
             }
         }
     }
