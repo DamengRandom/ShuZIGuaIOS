@@ -11,82 +11,81 @@ struct AboutView: View {
     @State private var tabIndex = 0
     
     var body: some View {
-        VStack(alignment: .leading) {
-            VStack {
-                Text("数字卦简介").font(.title)
+        NavigationStack {
+            VStack(alignment: .leading) {
+                Spacer()
+
+                VStack {
+                    Text("数字卦简介").font(.title)
+                    
+                    Text("周易数字卦是《易经》中的一种卦法解析方式。数字卦是易经应用的一个重要组成部分，它为人们提供了一种系统化和规范化的方式来理解和运用《易经》，使这一古老智慧在当代依然有着实际的价值和意义。").padding(.top, 16).padding(.bottom, 16).padding(.horizontal, 4)
+                }.padding()
                 
-                Text("description here ...")
-            }.padding()
-            
-            VStack(alignment: .leading) {
-                Text("其它").font(.title).padding()
+                VStack(alignment: .leading) {
+                    Text("易经相关").font(.headline).padding(.horizontal, 20).padding(.vertical, 0)
+                    
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            NavigationLink {
+                                AboutExplanationView()
+                            } label: {
+                                Label("易经的简介", systemImage: "01.square")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                            }.accentColor(Color.black)
+                        }.padding()
+                    }.background(Color(.systemFill)).overlay {
+                        RoundedRectangle(cornerRadius: 8).stroke(Color(.systemFill), lineWidth: 1)
+                    }.cornerRadius(8).padding(.horizontal, 20).padding(.vertical, 10)
+                }
                 
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack {
-                        Label("捐助", systemImage: "heart.fill")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 15)
-                    .padding(.bottom, 5)
+                VStack(alignment: .leading) {
+                    Text("其他功能").font(.headline).padding(.horizontal, 20).padding(.vertical, 0)
                     
-                    HStack {
-                        Label("开发者", systemImage: "person.fill")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 5)
-                    .padding(.bottom, 15)
-                }.background(Color(.systemFill)).padding(.horizontal, 20).padding(.vertical, 10).cornerRadius(10)
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            NavigationLink {
+                                AboutExplanationView()
+                            } label: {
+                                Label("服务条款", systemImage: "list.bullet.rectangle.portrait")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                            }.accentColor(Color.black)
+                        }.padding(.horizontal).padding(.top, 16)
+                        HStack {
+                            NavigationLink {
+                                AboutExplanationView()
+                            } label: {
+                                Label("保持联系", systemImage: "iphone.gen1.radiowaves.left.and.right.circle")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                            }.accentColor(Color.black)
+                        }.padding(.horizontal).padding(.top, 12)
+                        HStack {
+                            NavigationLink {
+                                AboutExplanationView()
+                            } label: {
+                                Label("捐助", systemImage: "heart")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                            }.accentColor(Color.black)
+                        }.padding(.horizontal).padding(.top, 12)
+                        HStack {
+                            NavigationLink {
+                                AboutExplanationView()
+                            } label: {
+                                Label("留言", systemImage: "ellipsis.message")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                            }.accentColor(Color.black)
+                        }.padding(.horizontal).padding(.top, 12).padding(.bottom, 16)
+                    }.background(Color(.systemFill)).overlay {
+                        RoundedRectangle(cornerRadius: 8).stroke(Color(.systemFill), lineWidth: 1)
+                    }.cornerRadius(8).padding(.horizontal, 20).padding(.vertical, 10)
+                }
+                
+                Spacer()
             }
-            
-            VStack(alignment: .leading) {
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack {
-                        Label("捐助", systemImage: "heart.fill")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 15)
-                    .padding(.bottom, 5)
-                    
-                    HStack {
-                        Label("开发者", systemImage: "person.fill")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 5)
-                    .padding(.bottom, 15)
-                }.background(Color(.systemFill)).padding(.horizontal, 20).padding(.vertical, 10).cornerRadius(10)
-            }
-            
-            VStack(alignment: .leading) {
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack {
-                        Label("捐助", systemImage: "heart.fill")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 15)
-                    .padding(.bottom, 5)
-                    
-                    HStack {
-                        Label("开发者", systemImage: "person.fill")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 5)
-                    .padding(.bottom, 15)
-                }.background(Color(.systemFill)).padding(.horizontal, 20).padding(.vertical, 10).cornerRadius(10)
-            }
-            
-            Spacer()
         }
     }
 }
