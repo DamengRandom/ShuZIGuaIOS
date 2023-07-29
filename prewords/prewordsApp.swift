@@ -27,8 +27,8 @@ struct prewordsApp: App {
  1. swift ui snack bar message to display error message of the form [@TODO]
  2. slider view for youtube videos: https://www.youtube.com/watch?v=VYxxzrlS8q0 [made it]
  3. design ideas: https://dribbble.com/tags/ios + https://dribbble.com/search/ios
- 4. card view: https://www.youtube.com/watch?v=BeRXvlr9Tgc + https://developer.apple.com/tutorials/app-dev-training/creating-a-card-view
- 5. make article links as boxes of scrolling
+ 4. card view: https://www.youtube.com/watch?v=BeRXvlr9Tgc + https://developer.apple.com/tutorials/app-dev-training/creating-a-card-view [made it]
+ 5. make article links as boxes of scrolling [made it]
  6. make settings page top 30 percent of page make a background image
  7. 
  */

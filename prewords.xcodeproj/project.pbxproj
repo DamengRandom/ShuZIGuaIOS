@@ -29,6 +29,7 @@
 		CD716A072A6FF47B00FF5501 /* AboutExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A062A6FF47B00FF5501 /* AboutExplanationView.swift */; };
 		CD716A092A71326300FF5501 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A082A71326300FF5501 /* CardView.swift */; };
 		CD716A0B2A71335700FF5501 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A0A2A71335700FF5501 /* CardModel.swift */; };
+		CD716A0D2A74D6CA00FF5501 /* VerticalWebLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		CD716A062A6FF47B00FF5501 /* AboutExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutExplanationView.swift; sourceTree = "<group>"; };
 		CD716A082A71326300FF5501 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CD716A0A2A71335700FF5501 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalWebLinksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				CD7169EA2A49B76B00FF5501 /* AppView.swift */,
 				CD7169F02A49B8EB00FF5501 /* DashboardView.swift */,
 				CD7169FB2A543C2F00FF5501 /* AnswerView.swift */,
+				CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */,
 				CD716A042A6FF19500FF5501 /* AboutPointView.swift */,
 				CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */,
 				CD716A022A6D08B500FF5501 /* NumberFieldView.swift */,
@@ -252,6 +255,7 @@
 				CD716A072A6FF47B00FF5501 /* AboutExplanationView.swift in Sources */,
 				CD716A052A6FF19500FF5501 /* AboutPointView.swift in Sources */,
 				CD7169A72A3C802400FF5501 /* prewordsApp.swift in Sources */,
+				CD716A0D2A74D6CA00FF5501 /* VerticalWebLinksView.swift in Sources */,
 				CD7169F72A52E17500FF5501 /* AnswerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

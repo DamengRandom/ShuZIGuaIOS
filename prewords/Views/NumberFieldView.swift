@@ -26,7 +26,7 @@ struct NumberFieldView: View {
                 if (filtered != newValue) {
                     self.value = filtered
                 }
-            }
+            }.cornerRadius(8)
         Spacer().frame(height: space)
     }
 }

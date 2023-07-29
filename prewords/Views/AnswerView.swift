@@ -16,33 +16,36 @@ func openWebSite(urlString: String) {
 
 struct AnswerView: View {
     @Binding var output: String
-
+    
     var body: some View {
         let theAnswer = getAnwers(guaYaoName: output)
-
+        
         ScrollView {
             VStack(alignment: .leading) {
-                Text("卦爻: \(theAnswer.guaName)\(theAnswer.yaoName)").font(.largeTitle).padding(.leading, 8).padding(.bottom, 16)
-
-                Text("卦辞: \(theAnswer.guaCiWord)").font(.headline).padding(.bottom, 0).padding(.leading, 8)
-
-                Text("爻辞: \(theAnswer.yaoCiWord)").font(.headline).padding(.top, 1).padding(.leading, 8).padding(.bottom, 16)
-
+                HStack {
+                    Text("卦爻:").font(.largeTitle).bold().padding(.leading, 8)
+                    Text(" \(theAnswer.guaName)\(theAnswer.yaoName)").font(.largeTitle)
+                }.padding(.bottom, 16)
+                
+                HStack {
+                    Text("卦辞:").font(.headline).bold().padding(.leading, 8)
+                    Text("\(theAnswer.guaCiWord)")
+                }.padding(.bottom, 0)
+                
+                HStack {
+                    Text("爻辞:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
+                    Text("\(theAnswer.yaoCiWord)")
+                }.padding(.bottom, 16)
+                
                 TabView {
                     ForEach(theAnswer.videos, id: \.self) { video in
                         Video(videoURL: video).frame(width: 350, height: 190).cornerRadius(16).padding(.horizontal, 24)
                     }
                 }.tabViewStyle(PageTabViewStyle()).frame(height: 200)
                 
-                Text("相关索引").font(.title).padding(.leading, 8).padding(.bottom, 16).padding(.top, 16)
+                Text("相关索引").font(.title3).padding(.leading, 8).padding(.top, 24)
                 
-                ForEach(Array(theAnswer.references.enumerated()), id: \.element) { index, reference in
-                    Button(action: {
-                        openWebSite(urlString: reference)
-                    }) {
-                        Text("文章 - (\(index + 1))").padding(.leading, 8).padding(.top, 2)
-                    }
-                }
+                VerticalWebLinksView( listOfLinks: theAnswer.references, linkTitle: "文章")
             }.padding()
         }
     }
@@ -56,7 +59,7 @@ struct AnswerView_Previews: PreviewProvider {
 
 struct Video: UIViewRepresentable {
     let videoURL: String
-
+    
     func makeUIView(context: Context) -> some WKWebView {
         return WKWebView()
     }

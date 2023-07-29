@@ -51,10 +51,11 @@ struct DashboardView: View {
                             }
                             .padding(.top, 8)
                             .padding(.bottom, 8)
+                            .padding(.horizontal)
                             .frame(width: 280, height: 40)
                             .foregroundColor(Color.white)
                             .background(Color.indigo)
-                            .padding(.horizontal)
+                            .cornerRadius(8)
                             
                             if (!viewModel.errorMessage.isEmpty) {
                                 Text(viewModel.errorMessage).foregroundColor(Color.red)
