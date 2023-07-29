@@ -30,6 +30,7 @@
 		CD716A092A71326300FF5501 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A082A71326300FF5501 /* CardView.swift */; };
 		CD716A0B2A71335700FF5501 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A0A2A71335700FF5501 /* CardModel.swift */; };
 		CD716A0D2A74D6CA00FF5501 /* VerticalWebLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */; };
+		CD716A0F2A74D84700FF5501 /* IChingIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A0E2A74D84700FF5501 /* IChingIntroView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		CD716A082A71326300FF5501 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CD716A0A2A71335700FF5501 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalWebLinksView.swift; sourceTree = "<group>"; };
+		CD716A0E2A74D84700FF5501 /* IChingIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChingIntroView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				CD7169F02A49B8EB00FF5501 /* DashboardView.swift */,
 				CD7169FB2A543C2F00FF5501 /* AnswerView.swift */,
 				CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */,
+				CD716A0E2A74D84700FF5501 /* IChingIntroView.swift */,
 				CD716A042A6FF19500FF5501 /* AboutPointView.swift */,
 				CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */,
 				CD716A022A6D08B500FF5501 /* NumberFieldView.swift */,
@@ -247,6 +250,7 @@
 				CD716A092A71326300FF5501 /* CardView.swift in Sources */,
 				CD716A0B2A71335700FF5501 /* CardModel.swift in Sources */,
 				CD7169FE2A6285A400FF5501 /* SplashScreenView.swift in Sources */,
+				CD716A0F2A74D84700FF5501 /* IChingIntroView.swift in Sources */,
 				CD7169EF2A49B7AC00FF5501 /* DashboardViewViewModel.swift in Sources */,
 				CD7169FA2A52E39E00FF5501 /* Answers.swift in Sources */,
 				CD7169E92A49B75300FF5501 /* AboutView.swift in Sources */,

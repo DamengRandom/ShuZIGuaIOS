@@ -12,6 +12,8 @@ struct Answer: Codable {
     let yaoName: String
     let guaCiWord: String
     let yaoCiWord: String
-    let videos: [String]
+    let tuanCi: String
+    let daXiang: String
+    let xiaoXiang: String
     let references: [String]
 }
