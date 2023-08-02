@@ -31,6 +31,9 @@
 		CD716A0B2A71335700FF5501 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A0A2A71335700FF5501 /* CardModel.swift */; };
 		CD716A0D2A74D6CA00FF5501 /* VerticalWebLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */; };
 		CD716A0F2A74D84700FF5501 /* IChingIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A0E2A74D84700FF5501 /* IChingIntroView.swift */; };
+		CD716A112A75DC1900FF5501 /* TermsOfServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A102A75DC1900FF5501 /* TermsOfServiceView.swift */; };
+		CD716A132A792B5100FF5501 /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A122A792B5100FF5501 /* EmailHelper.swift */; };
+		CD716A152A7A736F00FF5501 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716A142A7A736F00FF5501 /* ContactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		CD716A0A2A71335700FF5501 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalWebLinksView.swift; sourceTree = "<group>"; };
 		CD716A0E2A74D84700FF5501 /* IChingIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChingIntroView.swift; sourceTree = "<group>"; };
+		CD716A102A75DC1900FF5501 /* TermsOfServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceView.swift; sourceTree = "<group>"; };
+		CD716A122A792B5100FF5501 /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+		CD716A142A7A736F00FF5501 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +121,13 @@
 			isa = PBXGroup;
 			children = (
 				CD7169E82A49B75300FF5501 /* AboutView.swift */,
+				CD716A142A7A736F00FF5501 /* ContactView.swift */,
 				CD716A082A71326300FF5501 /* CardView.swift */,
 				CD716A062A6FF47B00FF5501 /* AboutExplanationView.swift */,
 				CD7169EA2A49B76B00FF5501 /* AppView.swift */,
 				CD7169F02A49B8EB00FF5501 /* DashboardView.swift */,
 				CD7169FB2A543C2F00FF5501 /* AnswerView.swift */,
+				CD716A102A75DC1900FF5501 /* TermsOfServiceView.swift */,
 				CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */,
 				CD716A0E2A74D84700FF5501 /* IChingIntroView.swift */,
 				CD716A042A6FF19500FF5501 /* AboutPointView.swift */,
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				CD7169F32A52DD1800FF5501 /* GuaYaoHelpers.swift */,
+				CD716A122A792B5100FF5501 /* EmailHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -247,8 +256,11 @@
 				CD7169EB2A49B76B00FF5501 /* AppView.swift in Sources */,
 				CD7169FC2A543C2F00FF5501 /* AnswerView.swift in Sources */,
 				CD7169F12A49B8EB00FF5501 /* DashboardView.swift in Sources */,
+				CD716A152A7A736F00FF5501 /* ContactView.swift in Sources */,
+				CD716A132A792B5100FF5501 /* EmailHelper.swift in Sources */,
 				CD716A092A71326300FF5501 /* CardView.swift in Sources */,
 				CD716A0B2A71335700FF5501 /* CardModel.swift in Sources */,
+				CD716A112A75DC1900FF5501 /* TermsOfServiceView.swift in Sources */,
 				CD7169FE2A6285A400FF5501 /* SplashScreenView.swift in Sources */,
 				CD716A0F2A74D84700FF5501 /* IChingIntroView.swift in Sources */,
 				CD7169EF2A49B7AC00FF5501 /* DashboardViewViewModel.swift in Sources */,
