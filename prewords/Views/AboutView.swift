@@ -13,8 +13,8 @@ struct AboutView: View {
     @State var showContactView = false
     
     var body: some View {
-        NavigationView {
-            NavigationStack {
+        NavigationStack {
+            NavigationView {
                 VStack(alignment: .leading) {
                     Spacer()
                     
@@ -87,12 +87,12 @@ struct AboutView: View {
                     
                     Spacer()
                 }
-            }
-        }.navigationBarItems(trailing: Button("保持联系", action: {
-            self.showContactView = true
-        })).sheet(isPresented: $showContactView, content: {
-            ContactView()
-        })
+            }.navigationBarItems(trailing: Button("保持联系", action: {
+                self.showContactView = true
+            })).sheet(isPresented: $showContactView, content: {
+                ContactView()
+            }).padding()
+        }
     }
 }
 
