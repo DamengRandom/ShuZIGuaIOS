@@ -15,5 +15,6 @@ struct Answer: Codable {
     let tuanCi: String
     let daXiang: String
     let xiaoXiang: String
+    let xiaoXiangCi: String
     let references: [String]
 }

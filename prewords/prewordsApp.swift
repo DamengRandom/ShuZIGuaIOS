@@ -30,5 +30,6 @@ struct prewordsApp: App {
  4. card view: https://www.youtube.com/watch?v=BeRXvlr9Tgc + https://developer.apple.com/tutorials/app-dev-training/creating-a-card-view [made it]
  5. make article links as boxes of scrolling [made it]
  6. make settings page top 30 percent of page make a background image
- 7. 
+ 7. make theme switch functionality
+ 7. make modal view functionality - contact view [made it]
  */

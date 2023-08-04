@@ -32,7 +32,7 @@ struct AboutView: View {
                                 NavigationLink {
                                     IChingIntroView()
                                 } label: {
-                                    Label("何为易经", systemImage: "01.square")
+                                    Label(" 何为易经", systemImage: "01.square")
                                     Spacer()
                                     Image(systemName: "chevron.right")
                                 }.accentColor(Color.black)
@@ -50,7 +50,7 @@ struct AboutView: View {
                                 NavigationLink {
                                     TermsOfServiceView()
                                 } label: {
-                                    Label("服务条款", systemImage: "list.bullet.rectangle.portrait")
+                                    Label("服务条款", systemImage: "list.bullet.rectangle")
                                     Spacer()
                                     Image(systemName: "chevron.right")
                                 }.accentColor(Color.black)
@@ -59,7 +59,7 @@ struct AboutView: View {
                                 NavigationLink {
                                     TermsOfServiceView()
                                 } label: {
-                                    Label("免责声明", systemImage: "iphone.gen1.radiowaves.left.and.right.circle")
+                                    Label("免责声明", systemImage: "exclamationmark.bubble")
                                     Spacer()
                                     Image(systemName: "chevron.right")
                                 }.accentColor(Color.black)
