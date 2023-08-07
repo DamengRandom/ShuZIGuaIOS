@@ -17,10 +17,11 @@ struct SplashScreenView: View {
     @State private var isActive = false
     @State private var size = 0.8
     @State private var opacity = 0.5
+    @AppStorage("isDarkMode") private var isDarkMode = false
 
     var body: some View {
         if isActive {
-            AppView()
+            AppView().preferredColorScheme(isDarkMode ? .dark : .light)
         } else {
             VStack {
                 VStack {
