@@ -20,50 +20,51 @@ struct AnswerView: View {
     
     var body: some View {
         let theAnswer = getAnwers(guaYaoName: output)
-        
-        ScrollView {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("卦爻:").font(.largeTitle).bold().padding(.leading, 8)
-                    Text(" \(theAnswer.guaName)\(theAnswer.yaoName)").font(.largeTitle)
-                }.padding(.bottom, 16)
-                
-                HStack {
-                    Text("卦辞:").font(.headline).bold().padding(.leading, 8)
-                    Text("\(theAnswer.guaCiWord)")
-                }.padding(.bottom, 0)
-                
-                HStack {
-                    Text("爻辞:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
-                    Text("\(theAnswer.yaoCiWord)")
-                }.padding(.bottom, 0)
-                
-                HStack {
-                    Text("彖传:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
-                    Text("\(theAnswer.tuanCi)")
-                }.padding(.bottom, 0)
-                
-                HStack {
-                    Text("大象:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
-                    Text("\(theAnswer.daXiang)")
-                }.padding(.bottom, 0)
-                
-                HStack {
-                    Text("小象:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
-                    Text("\(theAnswer.xiaoXiang)")
-                }.padding(.bottom, 16)
-
-//                TabView {
-//                    ForEach(theAnswer.videos, id: \.self) { video in
-//                        Video(videoURL: video).frame(width: 350, height: 190).cornerRadius(16).padding(.horizontal, 24)
-//                    }
-//                }.tabViewStyle(PageTabViewStyle()).frame(height: 200)
-
-                Text("相关索引").font(.title3).padding(.leading, 8).padding(.top, 24)
-                
-                VerticalWebLinksView( listOfLinks: theAnswer.references, linkTitle: "文章")
-            }.padding()
-        }.modifier(AccentColorModifier(isDarkMode: isDarkMode))
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("卦爻:").font(.largeTitle).bold().padding(.leading, 8)
+                        Text(" \(theAnswer.guaName)\(theAnswer.yaoName)").font(.largeTitle)
+                    }.padding(.bottom, 16)
+                    
+                    HStack {
+                        Text("卦辞:").font(.headline).bold().padding(.leading, 8)
+                        Text("\(theAnswer.guaCiWord)")
+                    }.padding(.bottom, 0)
+                    
+                    HStack {
+                        Text("爻辞:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
+                        Text("\(theAnswer.yaoCiWord)")
+                    }.padding(.bottom, 0)
+                    
+                    HStack {
+                        Text("彖传:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
+                        Text("\(theAnswer.tuanCi)")
+                    }.padding(.bottom, 0)
+                    
+                    HStack {
+                        Text("大象:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
+                        Text("\(theAnswer.daXiang)")
+                    }.padding(.bottom, 0)
+                    
+                    HStack {
+                        Text("小象:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
+                        Text("\(theAnswer.xiaoXiang)")
+                    }.padding(.bottom, 16)
+                    
+                    //                TabView {
+                    //                    ForEach(theAnswer.videos, id: \.self) { video in
+                    //                        Video(videoURL: video).frame(width: 350, height: 190).cornerRadius(16).padding(.horizontal, 24)
+                    //                    }
+                    //                }.tabViewStyle(PageTabViewStyle()).frame(height: 200)
+                    
+                    Text("相关索引").font(.title3).padding(.leading, 8).padding(.top, 24)
+                    
+                    VerticalWebLinksView(listOfLinks: theAnswer.references, linkTitle: "文章")
+                }.padding().modifier(AccentColorModifier(isDarkMode: isDarkMode))
+            }.modifier(AccentColorModifier(isDarkMode: isDarkMode))
+        }
     }
 }
 
