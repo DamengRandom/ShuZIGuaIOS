@@ -16,6 +16,7 @@ func openWebSite(urlString: String) {
 
 struct AnswerView: View {
     @Binding var output: String
+    @AppStorage("isDarkMode") private var isDarkMode = false
     
     var body: some View {
         let theAnswer = getAnwers(guaYaoName: output)
@@ -62,7 +63,7 @@ struct AnswerView: View {
                 
                 VerticalWebLinksView( listOfLinks: theAnswer.references, linkTitle: "文章")
             }.padding()
-        }
+        }.modifier(AccentColorModifier(isDarkMode: isDarkMode))
     }
 }
 

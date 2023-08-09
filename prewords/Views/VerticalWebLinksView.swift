@@ -10,6 +10,7 @@ import SwiftUI
 struct VerticalWebLinksView: View {
     let listOfLinks: [String]
     let linkTitle: String
+    @AppStorage("isDarkMode") private var isDarkMode = false
     
     var body: some View {
         ScrollView(.horizontal) {
@@ -22,9 +23,9 @@ struct VerticalWebLinksView: View {
                             .frame(width: 100, height: 100)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 8)
-                                    .stroke(Color.black, lineWidth: 3)
+                                    .stroke(Color(isDarkMode ? .white : .black), lineWidth: 3)
                             )
-                            .accentColor(.black)
+                            .modifier(AccentColorModifier(isDarkMode: isDarkMode))
                     }
                 }.padding(.trailing, 8)
             }.padding(.leading, 10).padding(.vertical)

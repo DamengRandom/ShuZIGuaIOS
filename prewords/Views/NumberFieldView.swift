@@ -12,6 +12,7 @@ struct NumberFieldView: View {
     var title: String
     @Binding var value: String
     var space: CGFloat
+    @AppStorage("isDarkMode") private var isDarkMode = false
 
     var body: some View {
         TextField(title, text: $value)
@@ -27,6 +28,7 @@ struct NumberFieldView: View {
                     self.value = filtered
                 }
             }.cornerRadius(8)
+            .modifier(AccentColorModifier(isDarkMode: isDarkMode))
         Spacer().frame(height: space)
     }
 }

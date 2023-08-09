@@ -84,8 +84,8 @@ struct AboutView: View {
                 self.showContactView = true
             })).sheet(isPresented: $showContactView, content: {
                 ContactView()
-            }).padding().accentColor(Color(isDarkMode ? .white : .black)).modifier(AccentColorModifier(isDarkMode: isDarkMode))
-        }.preferredColorScheme(isDarkMode ? .dark : .light)
+            }).padding()
+        }.preferredColorScheme(isDarkMode ? .dark : .light).modifier(AccentColorModifier(isDarkMode: isDarkMode))
     }
 }
 
