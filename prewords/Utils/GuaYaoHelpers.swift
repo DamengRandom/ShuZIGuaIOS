@@ -346,3 +346,7 @@ func getAllYaos(theGua: String) -> [String] {
         return ["无", "无", "无", "无", "无", "无"]
     }
 }
+
+func getAllYaosReversed(theGuaName: String) -> [String] {
+    return getAllYaos(theGua: theGuaName).reversed()
+}

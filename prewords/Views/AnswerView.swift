@@ -59,8 +59,15 @@ struct AnswerView: View {
                     //                    }
                     //                }.tabViewStyle(PageTabViewStyle()).frame(height: 200)
                     
-                    Text("相关索引").font(.title3).padding(.leading, 8).padding(.top, 24)
                     
+                    VStack {
+                        // get GuaXiang Lines Graph
+                        ForEach(Array(getAllYaosReversed(theGuaName: theAnswer.guaName).enumerated()), id: \.element) { index, eachYao in
+                                GuaXiangLinesView(yinYangSymbol: eachYao.contains("六") ? "yin" : "yang")
+                        }
+                    }.frame(maxWidth: .infinity, maxHeight: 140, alignment: .center)
+
+                    Text("相关索引").font(.title3).padding(.leading, 8).padding(.top, 24)
                     VerticalWebLinksView(listOfLinks: theAnswer.references, linkTitle: "文章")
                 }.padding().modifier(AccentColorModifier(isDarkMode: isDarkMode))
             }.modifier(AccentColorModifier(isDarkMode: isDarkMode))

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD47754D2A83B43400795C06 /* XuGuaZhuanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47754C2A83B43400795C06 /* XuGuaZhuanView.swift */; };
 		CD47754F2A83B46000795C06 /* ZaGuaZhuanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47754E2A83B46000795C06 /* ZaGuaZhuanView.swift */; };
+		CD4775532A84F44E00795C06 /* GuaXiangLinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4775522A84F44E00795C06 /* GuaXiangLinesView.swift */; };
 		CD7169A72A3C802400FF5501 /* prewordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169A62A3C802400FF5501 /* prewordsApp.swift */; };
 		CD7169AB2A3C802600FF5501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7169AA2A3C802600FF5501 /* Assets.xcassets */; };
 		CD7169AE2A3C802600FF5501 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7169AD2A3C802600FF5501 /* Preview Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		CD47754C2A83B43400795C06 /* XuGuaZhuanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XuGuaZhuanView.swift; sourceTree = "<group>"; };
 		CD47754E2A83B46000795C06 /* ZaGuaZhuanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZaGuaZhuanView.swift; sourceTree = "<group>"; };
+		CD4775522A84F44E00795C06 /* GuaXiangLinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuaXiangLinesView.swift; sourceTree = "<group>"; };
 		CD7169A32A3C802400FF5501 /* prewords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prewords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7169A62A3C802400FF5501 /* prewordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prewordsApp.swift; sourceTree = "<group>"; };
 		CD7169AA2A3C802600FF5501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				CD716A042A6FF19500FF5501 /* AboutPointView.swift */,
 				CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */,
 				CD716A022A6D08B500FF5501 /* NumberFieldView.swift */,
+				CD4775522A84F44E00795C06 /* GuaXiangLinesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				CD7169EF2A49B7AC00FF5501 /* DashboardViewViewModel.swift in Sources */,
 				CD7169FA2A52E39E00FF5501 /* Answers.swift in Sources */,
 				CD7169E92A49B75300FF5501 /* AboutView.swift in Sources */,
+				CD4775532A84F44E00795C06 /* GuaXiangLinesView.swift in Sources */,
 				CD716A032A6D08B500FF5501 /* NumberFieldView.swift in Sources */,
 				CD7169F42A52DD1800FF5501 /* GuaYaoHelpers.swift in Sources */,
 				CD716A072A6FF47B00FF5501 /* AboutExplanationView.swift in Sources */,
