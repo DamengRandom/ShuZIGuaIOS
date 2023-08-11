@@ -15,7 +15,7 @@ struct XuGuaZhuanView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text("序卦传").font(.largeTitle)
+                    Text("序卦传").font(.title)
                     
                     Picker("", selection: $segmentedChoice) {
                         Text("上篇").tag(0)

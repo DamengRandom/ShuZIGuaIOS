@@ -19,10 +19,10 @@ struct AppView: View {
     var generalView: some View {
         TabView {
             DashboardView().tabItem {
-                Label("", systemImage: "house")
+                Label("主页", systemImage: "house")
             }
             AboutView().tabItem {
-                Label("", systemImage: "gearshape.fill")
+                Label("关于", systemImage: "gearshape.fill")
             }
         }
     }

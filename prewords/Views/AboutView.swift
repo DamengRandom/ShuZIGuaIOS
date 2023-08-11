@@ -49,7 +49,7 @@ struct AboutView: View {
                                     NavigationLink {
                                         XuGuaZhuanView()
                                     } label: {
-                                        Label("序卦传", systemImage: "02.square")
+                                        Label("序卦传", systemImage: "03.square")
                                         Spacer()
                                         Image(systemName: "chevron.right")
                                     }
