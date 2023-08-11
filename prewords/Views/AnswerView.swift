@@ -19,52 +19,50 @@ struct AnswerView: View {
     
     var body: some View {
         let theAnswer = getAnwers(guaYaoName: output)
-
-        NavigationView {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("卦爻:").font(.largeTitle).bold().padding(.leading, 8)
-                        Text(" \(theAnswer.guaName)\(theAnswer.yaoName)").font(.largeTitle)
-                    }.padding(.bottom, 16)
-                    
-                    HStack {
-                        Text("卦辞:").font(.headline).bold().padding(.leading, 8)
-                        Text("\(theAnswer.guaCiWord)")
-                    }.padding(.bottom, 0)
-                    
-                    HStack {
-                        Text("爻辞:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
-                        Text("\(theAnswer.yaoCiWord)")
-                    }.padding(.bottom, 0)
-                    
-                    HStack {
-                        Text("彖传:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
-                        Text("\(theAnswer.tuanCi)")
-                    }.padding(.bottom, 0)
-                    
-                    HStack {
-                        Text("大象:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
-                        Text("\(theAnswer.daXiang)")
-                    }.padding(.bottom, 0)
-                    
-                    HStack {
-                        Text("小象:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
-                        Text("\(theAnswer.xiaoXiang)")
-                    }.padding(.bottom, 16)
-                    
-                    VStack {
-                        // get GuaXiang Lines Graph
-                        ForEach(Array(getAllYaosReversed(theGuaName: theAnswer.guaName).enumerated()), id: \.element) { index, eachYao in
-                                GuaXiangLinesView(yinYangSymbol: eachYao.contains("六") ? "yin" : "yang")
-                        }
-                    }.frame(maxWidth: .infinity, maxHeight: 140, alignment: .center)
-
-                    Text("相关索引").font(.title3).padding(.leading, 8).padding(.top, 24)
-
-                    VerticalWebLinksView(listOfLinks: theAnswer.references, linkTitle: "文章")
-                }.padding()
-            }
+        
+        ScrollView {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("卦爻:").font(.largeTitle).bold().padding(.leading, 8)
+                    Text(" \(theAnswer.guaName)\(theAnswer.yaoName)").font(.largeTitle)
+                }.padding(.bottom, 16)
+                
+                HStack {
+                    Text("卦辞:").font(.headline).bold().padding(.leading, 8)
+                    Text("\(theAnswer.guaCiWord)")
+                }.padding(.bottom, 0)
+                
+                HStack {
+                    Text("爻辞:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
+                    Text("\(theAnswer.yaoCiWord)")
+                }.padding(.bottom, 0)
+                
+                HStack {
+                    Text("彖传:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
+                    Text("\(theAnswer.tuanCi)")
+                }.padding(.bottom, 0)
+                
+                HStack {
+                    Text("大象:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
+                    Text("\(theAnswer.daXiang)")
+                }.padding(.bottom, 0)
+                
+                HStack {
+                    Text("小象:").font(.headline).bold().padding(.top, 1).padding(.leading, 8)
+                    Text("\(theAnswer.xiaoXiang)")
+                }.padding(.bottom, 16)
+                
+                VStack {
+                    // get GuaXiang Lines Graph
+                    ForEach(Array(getAllYaosReversed(theGuaName: theAnswer.guaName).enumerated()), id: \.element) { index, eachYao in
+                        GuaXiangLinesView(yinYangSymbol: eachYao.contains("六") ? "yin" : "yang")
+                    }
+                }.frame(maxWidth: .infinity, maxHeight: 140, alignment: .center)
+                
+                Text("相关索引").font(.title3).padding(.leading, 8).padding(.top, 24)
+                
+                VerticalWebLinksView(listOfLinks: theAnswer.references, linkTitle: "文章")
+            }.padding()
         }
     }
 }
@@ -74,21 +72,3 @@ struct AnswerView_Previews: PreviewProvider {
         AnswerView(output: .constant("test value"))
     }
 }
-
-struct Video: UIViewRepresentable {
-    let videoURL: String
-    
-    func makeUIView(context: Context) -> some WKWebView {
-        return WKWebView()
-    }
-    
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        guard let YoutubeURL = URL(string: videoURL) else {
-            return
-        }
-        
-        uiView.scrollView.isScrollEnabled = false
-        uiView.load(URLRequest(url: YoutubeURL))
-    }
-}
-
