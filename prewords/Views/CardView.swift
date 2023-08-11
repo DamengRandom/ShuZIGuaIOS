@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Just for study not going to use
+// Just for study not going to use this UI [NOT USE FOR THIS PORJECT]
 
 struct CardView: View {
     let card: Card

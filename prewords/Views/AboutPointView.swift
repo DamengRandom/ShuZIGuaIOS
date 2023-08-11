@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AboutPointView: View {
+struct AboutPointView: View { // NOT USE FOR THIS PROJECT
     let imageName: String
     let title: String
     let description: String

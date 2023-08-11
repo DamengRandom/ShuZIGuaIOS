@@ -10,9 +10,7 @@ import SwiftUI
 struct AboutView: View {
     @State private var tabIndex = 0
     @State var showContactView = false
-    
     @Environment(\.colorScheme) private var colorScheme
-    
     @AppStorage("isDarkMode") private var isDarkMode = false
     
     var body: some View {
@@ -72,24 +70,23 @@ struct AboutView: View {
                                         Image(systemName: "chevron.right")
                                     }
                                 }.padding(.horizontal).padding(.top, 16)
+                                
                                 HStack {
                                     NavigationLink {
-                                        TermsOfServiceView()
+                                        LegalStatementsView()
                                     } label: {
                                         Label("免责声明", systemImage: "exclamationmark.bubble")
                                         Spacer()
                                         Image(systemName: "chevron.right")
                                     }
                                 }.padding(.horizontal).padding(.top, 16)
+                                
                                 HStack {
-                                    NavigationLink {
-                                        TermsOfServiceView()
-                                    } label: {
-                                        Label("选择主题", systemImage: "ellipsis.message")
-                                        Spacer()
-                                        Toggle("", isOn: $isDarkMode)
-                                    }
+                                    Label("选择主题", systemImage: "ellipsis.message")
+                                    Spacer()
+                                    Toggle("", isOn: $isDarkMode)
                                 }.padding(.horizontal).padding(.top, 8)
+                                
                                 HStack {
                                     Label("当前版本", systemImage: "number.square")
                                     Text("(V1.0.1)").font(.caption)
@@ -106,7 +103,7 @@ struct AboutView: View {
             })).sheet(isPresented: $showContactView, content: {
                 ContactView()
             }).padding()
-        }.preferredColorScheme(isDarkMode ? .dark : .light).modifier(AccentColorModifier(isDarkMode: isDarkMode))
+        }.modifier(AccentColorModifier(isDarkMode: isDarkMode))
     }
 }
 

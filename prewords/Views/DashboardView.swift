@@ -13,6 +13,7 @@ struct DashboardView: View {
     @State private var output: String = "抱歉, 暂无结果 .."
     @State private var isCalculated: Bool = false
     @State var isValid: Bool = false
+    @AppStorage("isDarkMode") private var isDarkMode = false
     
     var body: some View {
         NavigationView {
@@ -53,8 +54,8 @@ struct DashboardView: View {
                             .padding(.bottom, 8)
                             .padding(.horizontal)
                             .frame(width: 280, height: 40)
-                            .foregroundColor(Color.white)
-                            .background(Color.indigo)
+                            .foregroundColor(Color(isDarkMode ? .black : .white))
+                            .background(Color(isDarkMode ? .white : .black))
                             .cornerRadius(8)
                             
                             if (!viewModel.errorMessage.isEmpty) {
@@ -69,7 +70,7 @@ struct DashboardView: View {
                     }
                 }
             }
-        }
+        }.modifier(AccentColorModifier(isDarkMode: isDarkMode))
     }
 }
 

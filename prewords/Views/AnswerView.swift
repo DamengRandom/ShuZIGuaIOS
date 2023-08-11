@@ -16,10 +16,10 @@ func openWebSite(urlString: String) {
 
 struct AnswerView: View {
     @Binding var output: String
-    @AppStorage("isDarkMode") private var isDarkMode = false
     
     var body: some View {
         let theAnswer = getAnwers(guaYaoName: output)
+
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
@@ -53,13 +53,6 @@ struct AnswerView: View {
                         Text("\(theAnswer.xiaoXiang)")
                     }.padding(.bottom, 16)
                     
-                    //                TabView {
-                    //                    ForEach(theAnswer.videos, id: \.self) { video in
-                    //                        Video(videoURL: video).frame(width: 350, height: 190).cornerRadius(16).padding(.horizontal, 24)
-                    //                    }
-                    //                }.tabViewStyle(PageTabViewStyle()).frame(height: 200)
-                    
-                    
                     VStack {
                         // get GuaXiang Lines Graph
                         ForEach(Array(getAllYaosReversed(theGuaName: theAnswer.guaName).enumerated()), id: \.element) { index, eachYao in
@@ -68,9 +61,10 @@ struct AnswerView: View {
                     }.frame(maxWidth: .infinity, maxHeight: 140, alignment: .center)
 
                     Text("相关索引").font(.title3).padding(.leading, 8).padding(.top, 24)
+
                     VerticalWebLinksView(listOfLinks: theAnswer.references, linkTitle: "文章")
-                }.padding().modifier(AccentColorModifier(isDarkMode: isDarkMode))
-            }.modifier(AccentColorModifier(isDarkMode: isDarkMode))
+                }.padding()
+            }
         }
     }
 }

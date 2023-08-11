@@ -10,6 +10,7 @@
 		CD47754D2A83B43400795C06 /* XuGuaZhuanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47754C2A83B43400795C06 /* XuGuaZhuanView.swift */; };
 		CD47754F2A83B46000795C06 /* ZaGuaZhuanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47754E2A83B46000795C06 /* ZaGuaZhuanView.swift */; };
 		CD4775532A84F44E00795C06 /* GuaXiangLinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4775522A84F44E00795C06 /* GuaXiangLinesView.swift */; };
+		CD4775552A864DBD00795C06 /* LegalStatementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4775542A864DBD00795C06 /* LegalStatementsView.swift */; };
 		CD7169A72A3C802400FF5501 /* prewordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7169A62A3C802400FF5501 /* prewordsApp.swift */; };
 		CD7169AB2A3C802600FF5501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7169AA2A3C802600FF5501 /* Assets.xcassets */; };
 		CD7169AE2A3C802600FF5501 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7169AD2A3C802600FF5501 /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		CD47754C2A83B43400795C06 /* XuGuaZhuanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XuGuaZhuanView.swift; sourceTree = "<group>"; };
 		CD47754E2A83B46000795C06 /* ZaGuaZhuanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZaGuaZhuanView.swift; sourceTree = "<group>"; };
 		CD4775522A84F44E00795C06 /* GuaXiangLinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuaXiangLinesView.swift; sourceTree = "<group>"; };
+		CD4775542A864DBD00795C06 /* LegalStatementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalStatementsView.swift; sourceTree = "<group>"; };
 		CD7169A32A3C802400FF5501 /* prewords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prewords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7169A62A3C802400FF5501 /* prewordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prewordsApp.swift; sourceTree = "<group>"; };
 		CD7169AA2A3C802600FF5501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,22 +128,23 @@
 		CD7169D22A49A44F00FF5501 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CD7169E82A49B75300FF5501 /* AboutView.swift */,
-				CD47754C2A83B43400795C06 /* XuGuaZhuanView.swift */,
-				CD716A142A7A736F00FF5501 /* ContactView.swift */,
-				CD716A082A71326300FF5501 /* CardView.swift */,
 				CD716A062A6FF47B00FF5501 /* AboutExplanationView.swift */,
-				CD7169EA2A49B76B00FF5501 /* AppView.swift */,
-				CD7169F02A49B8EB00FF5501 /* DashboardView.swift */,
+				CD716A042A6FF19500FF5501 /* AboutPointView.swift */,
+				CD7169E82A49B75300FF5501 /* AboutView.swift */,
 				CD7169FB2A543C2F00FF5501 /* AnswerView.swift */,
-				CD47754E2A83B46000795C06 /* ZaGuaZhuanView.swift */,
+				CD7169EA2A49B76B00FF5501 /* AppView.swift */,
+				CD716A082A71326300FF5501 /* CardView.swift */,
+				CD716A142A7A736F00FF5501 /* ContactView.swift */,
+				CD7169F02A49B8EB00FF5501 /* DashboardView.swift */,
+				CD4775522A84F44E00795C06 /* GuaXiangLinesView.swift */,
+				CD716A0E2A74D84700FF5501 /* IChingIntroView.swift */,
+				CD4775542A864DBD00795C06 /* LegalStatementsView.swift */,
+				CD716A022A6D08B500FF5501 /* NumberFieldView.swift */,
+				CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */,
 				CD716A102A75DC1900FF5501 /* TermsOfServiceView.swift */,
 				CD716A0C2A74D6C900FF5501 /* VerticalWebLinksView.swift */,
-				CD716A0E2A74D84700FF5501 /* IChingIntroView.swift */,
-				CD716A042A6FF19500FF5501 /* AboutPointView.swift */,
-				CD7169FD2A6285A400FF5501 /* SplashScreenView.swift */,
-				CD716A022A6D08B500FF5501 /* NumberFieldView.swift */,
-				CD4775522A84F44E00795C06 /* GuaXiangLinesView.swift */,
+				CD47754C2A83B43400795C06 /* XuGuaZhuanView.swift */,
+				CD47754E2A83B46000795C06 /* ZaGuaZhuanView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				CD4775532A84F44E00795C06 /* GuaXiangLinesView.swift in Sources */,
 				CD716A032A6D08B500FF5501 /* NumberFieldView.swift in Sources */,
 				CD7169F42A52DD1800FF5501 /* GuaYaoHelpers.swift in Sources */,
+				CD4775552A864DBD00795C06 /* LegalStatementsView.swift in Sources */,
 				CD716A072A6FF47B00FF5501 /* AboutExplanationView.swift in Sources */,
 				CD716A052A6FF19500FF5501 /* AboutPointView.swift in Sources */,
 				CD47754D2A83B43400795C06 /* XuGuaZhuanView.swift in Sources */,

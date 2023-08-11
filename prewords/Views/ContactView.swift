@@ -25,17 +25,27 @@ struct ContactView: View {
                     Image("me-wechat").resizable().aspectRatio(contentMode: .fit)
                     
                     HStack {
-                        Text("Email: ").font(.title3)
+                        Text("Email: ").bold()
                         Text("damonmaozewu@gmail.com")
+                    }.padding(.top, 12).font(.title3)
+                    
+                    HStack {
+                        Button(action: {
+                            openWebSite(urlString: "https://github.com/DamengRandom")
+                        }) {
+                            Text("Github: ").bold()
+                            Text("DamengRandom ").font(.title3)
+                        }.font(.title3)
                     }.padding(.top, 12)
                     
                     HStack {
-                        Text("赞助一下:").font(.title3)
+                        Text("赞助一下:").bold().font(.title3)
                         
                         Button(action: {
                             openWebSite(urlString: "https://buy.stripe.com/eVag2X8lC3xscDedQQ")
                         }) {
-                            Text("赏杯咖啡 (非常感谢～～)").bold()
+                            Text("赏杯咖啡").underline()
+                            Text("[非常感谢 🙏]").bold()
                         }.font(.title3)
                     }.padding(.top, 12).padding(.bottom, 24)
                     Spacer()

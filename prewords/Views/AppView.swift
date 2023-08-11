@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct AppView: View {
+    @AppStorage("isDarkMode") private var isDarkMode = false
     var body: some View {
         NavigationView {
             generalView
-        }
+        }.modifier(AccentColorModifier(isDarkMode: isDarkMode))
     }
     
     @ViewBuilder
